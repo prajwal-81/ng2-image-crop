@@ -32,7 +32,7 @@ export class ImageCropperComponent implements OnChanges {
     @ViewChild('sourceImage') sourceImage: ElementRef;
 
     @Input()
-    set imageFileChanged(file: File) {
+    set imageFileChanged(file: any) {
         this.initCropper();
         if (file) {
             this.loadImageFile(file);
@@ -135,7 +135,7 @@ export class ImageCropperComponent implements OnChanges {
         this.cropper.y2 = 10000;
     }
 
-    private loadImageFile(file: File): void {
+    private loadImageFile(file: any): void {
         const fileReader = new FileReader();
         fileReader.onload = (event: any) => {
             const imageType = file.type;
@@ -493,7 +493,7 @@ export class ImageCropperComponent implements OnChanges {
                     ctx.fillStyle = this.backgroundColor;
                     ctx.fillRect(0, 0, width, height);
                 }
-                ctx.drawImage(                   
+                ctx.drawImage(
                     this.originalImage,
                     imagePosition.x1,
                     imagePosition.y1,
