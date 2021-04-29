@@ -1,4 +1,4 @@
-# Image cropper for Angular
+# Image cropper for Angular 2
 ![example](https://github.com/Mawi137/ngx-image-cropper/raw/master/cropper-example.png)
 
 [StackBlitz](https://stackblitz.com/edit/image-cropper)
